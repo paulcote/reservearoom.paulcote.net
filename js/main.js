@@ -63,6 +63,13 @@ $(function() {
 	    createEvent();
 	});
 	
+	var panel_height = $('.info-panel').height();
+	var others_height = $('.current-time').outerHeight(true) + $('.current-date').outerHeight(true) + $('.next-title').outerHeight(true) + $('button.book-room').height() + ($('.next-events').outerHeight(true) - $('.next-events').height());
+	var next_height = (panel_height - others_height);
+	
+	$('.next-events').css('height',next_height+'px');
+	$('.bottom-shadow').css('top',next_height+'px');
+	
 	moment.locale('fr');
 	displayTime();
 	setTimeout(reverseDisplay, 1000*60*5);
