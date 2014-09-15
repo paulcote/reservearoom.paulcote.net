@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<title>Reservearoom</title>
+	<link href='http://fonts.googleapis.com/css?family=Roboto:900,400,700,500,300,100|Merriweather:400,300,700,900' rel='stylesheet' type='text/css'>
+	<link href="js/libs/pickadate/themes/default.css" media="screen, projection" rel="stylesheet" type="text/css" />
+	<link href="js/libs/pickadate/themes/default.date.css" media="screen, projection" rel="stylesheet" type="text/css" />
+	<link href="js/libs/pickadate/themes/default.time.css" media="screen, projection" rel="stylesheet" type="text/css" />
+	<link href="stylesheets/styles.css" media="screen, projection" rel="stylesheet" type="text/css" />
+	<!--[if IE]>
+  	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="js/libs/moment-with-locales.min.js"></script>
+	<script src="js/libs/pickadate/picker.js"></script>
+	<script src="js/libs/pickadate/picker.date.js"></script>
+	<script src="js/libs/pickadate/picker.time.js"></script>
+	<script src="js/libs/pickadate/translations/fr_FR.js"></script>
+	<script src="js/config.js"></script>
+	<script src="js/gapi.js"></script>
+	<script src="js/main.js"></script>
+	<script src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script>
+</head>
+
+<body>
+	<div class="modal active">
+		<div class="connect active">
+			<h1 class="modal-title">Connexion</h1>
+			<button class="google-connect">Connecter à Google</button>
+		</div>
+		<div class="calendar-select">
+			<h1 class="modal-title">Sélectionnez un <strong>calendrier</strong></h1>
+			<ul></ul>
+			<button class="modal-next">Sauvegarder</button>
+		</div>
+	</div>
+	<div class="viewport">
+		<div class="room-status free two-thirds">
+			<h1 class="room-name"></h1>
+			<p class="room-status-title"></p>
+			<div class="event-details">
+				<h2 class="event-name">Rencontre ponctuelle</h2>
+				<!--<p class="event-time">
+					<time datetime="2014-09-15 10:00">10h00</time> à <time datetime="2014-09-15 10:00">12h00</time>
+				</p>
+				<ul class="event-invites">
+					<li>Lorem ipsum-solardomet</li>
+					<li>Lorem ipsum-solardomet</li>
+					<li>Lorem ipsum-solardomet</li>
+					<li>Lorem ipsum-solardomet</li>
+					<li>Lorem ipsum-solardomet</li>
+					<li>Lorem ipsum-solardomet</li>
+					<li>Lorem ipsum-solardomet</li>
+					<li>Lorem ipsum-solardomet</li>
+					<li>Lorem ipsum-solardomet</li>
+					<li>Lorem ipsum-solardomet</li>
+					<li>Lorem ipsum-solardomet</li>
+				</ul>-->
+			</div>
+			<button class="change-status">Rendre occupée</button>
+		</div>
+		<div class="info-panel free one-third">
+			<p class="current-time">11h00</p>
+			<p class="current-date">
+				<span class="current-day">Vendredi </span>
+				<span class="current-day-date">12 </span>
+				<span class="current-month">septembre</span>
+			</p>
+			<h2 class="next-title">Prochaines <strong>réservations</strong></h2>
+			<!--<div class="next-events">
+				<h3 class="day">
+					Bientôt disponible
+				</h3>
+			</div>-->
+			
+			<div class="bottom-shadow"></div>
+			<div class="next-events">
+				<!--<h3 class="day">
+					<span class="day-name">Lundi </span>
+					<span class="date">19 </span>
+					<span class="month">septembre</span>
+				</h3>
+				<dl class="events">
+					<dt class="event-time">10h30 à 12h00</dt>
+					<dd class="event-title">Genevieve (client CAA)</dd>
+					<dt class="event-time">13h30 à 16h30</dt>
+					<dd class="event-title">Olivier (client CAA)</dd>
+				</dl>
+				<h3 class="day">
+					<span class="day-name">Lundi </span>
+					<span class="date">19 </span>
+					<span class="month">septembre</span>
+				</h3>
+				<dl class="events">
+					<dt class="event-time">10h30 à 12h00</dt>
+					<dd class="event-title">Genevieve (client CAA)</dd>
+					<dt class="event-time">13h30 à 16h30</dt>
+					<dd class="event-title">Olivier (client CAA)</dd>
+				</dl>
+				<h3 class="day">
+					<span class="day-name">Lundi </span>
+					<span class="date">19 </span>
+					<span class="month">septembre</span>
+				</h3>
+				<dl class="events">
+					<dt class="event-time">10h30 à 12h00</dt>
+					<dd class="event-title">Genevieve (client CAA)</dd>
+					<dt class="event-time">13h30 à 16h30</dt>
+					<dd class="event-title">Olivier (client CAA)</dd>
+				</dl>
+				<h3 class="day">
+					<span class="day-name">Lundi </span>
+					<span class="date">19 </span>
+					<span class="month">septembre</span>
+				</h3>
+				<dl class="events">
+					<dt class="event-time">10h30 à 12h00</dt>
+					<dd class="event-title">Genevieve (client CAA)</dd>
+					<dt class="event-time">13h30 à 16h30</dt>
+					<dd class="event-title">Olivier (client CAA)</dd>
+				</dl>-->
+			</div>
+			<button class="book-room">Faire une réservation</button>
+		</div>
+		<div class="book-room two-thirds">
+			<h2 class="form-title">Faire une <strong>réservation</strong><span class="room-name"> <span class="prefix">Salle</span> POINT <strong>COM</strong></span></h2>
+			<form method="post" action="">
+				<div>
+					<label for="form-date">Date</label>
+					<input class="datepicker" required="required" id="form-date" type="text" name="date" value="19 septembre 2014" />
+				</div>
+				<div>
+					<label for="form-start">Début</label>
+					<input class="timepicker small" required="required" id="form-start" type="text" name="start" value="12h00" />
+				</div>
+				<div>
+					<label for="form-end">Fin</label>
+					<input class="timepicker small" required="required" id="form-end" type="text" name="end" value="16h30" />
+				</div>
+				<div>
+					<label for="form-date">But</label>
+					<input class="wide" id="form-goal" required="required" type="text" name="reason" value="Paul (Rencontre d'intégrateur)" />
+				</div>
+				<!--<div>
+					<label for="form-invites">Invités</label>
+					<textarea id="form-invites" name="invites"></textarea>
+				</div>-->
+				<input type="submit" name="" value="Réserver" />
+			</form>
+		</div>
+	</div>
+</body>
+</html>

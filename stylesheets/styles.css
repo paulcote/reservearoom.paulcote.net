@@ -1,0 +1,560 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 17, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 19, ../sass/styles.scss */
+body, html {
+  height: 100%;
+  display: block;
+  font-family: "Roboto";
+  font-size: 1vw;
+  background-color: black;
+}
+
+/* line 27, ../sass/styles.scss */
+.picker__month {
+  text-transform: capitalize;
+}
+
+/* line 31, ../sass/styles.scss */
+.viewport {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  overflow: hidden;
+  position: relative;
+  z-index: 50;
+}
+/* line 40, ../sass/styles.scss */
+.viewport > div:first-child {
+  -webkit-transition: margin-left 0.3s ease-in-out;
+  -moz-transition: margin-left 0.3s ease-in-out;
+  -o-transition: margin-left 0.3s ease-in-out;
+  transition: margin-left 0.3s ease-in-out;
+}
+/* line 45, ../sass/styles.scss */
+.viewport.show-book-room:not(.reverse) > div:first-child, .viewport.reverse:not(.show-book-room) > div:first-child {
+  margin-left: -66.5%;
+}
+
+/* line 50, ../sass/styles.scss */
+.one-third {
+  display: block;
+  height: 100%;
+  width: 33.5%;
+  float: left;
+  position: relative;
+}
+
+/* line 58, ../sass/styles.scss */
+.two-thirds {
+  display: block;
+  height: 100%;
+  width: 60.5%;
+  padding: 3%;
+  float: left;
+  position: relative;
+}
+
+/* line 67, ../sass/styles.scss */
+.room-status {
+  -webkit-transition: background-color 0.3s ease-in-out;
+  -moz-transition: background-color 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+/* line 70, ../sass/styles.scss */
+.room-status.free {
+  -webkit-transition: background-color 0.3s ease-in-out;
+  -moz-transition: background-color 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+  background-color: #e2ecdf;
+  color: #0d2537;
+}
+/* line 76, ../sass/styles.scss */
+.room-status.free .room-status-title {
+  margin-left: -1.3rem;
+}
+/* line 80, ../sass/styles.scss */
+.room-status.free .change-status {
+  background-color: #e82100;
+  color: #e2ecdf;
+}
+/* line 85, ../sass/styles.scss */
+.room-status.busy {
+  -webkit-transition: background-color 0.3s ease-in-out;
+  -moz-transition: background-color 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+  background-color: #e82100;
+  color: #e2ecdf;
+}
+/* line 91, ../sass/styles.scss */
+.room-status.busy .room-status-title {
+  margin-left: -1rem;
+}
+/* line 95, ../sass/styles.scss */
+.room-status.busy .change-status {
+  background-color: #e2ecdf;
+  color: #0d2537;
+}
+/* line 100, ../sass/styles.scss */
+.room-status.busy .event-details {
+  opacity: 1;
+}
+/* line 105, ../sass/styles.scss */
+.room-status .room-name {
+  font-size: 4.00rem;
+}
+/* line 107, ../sass/styles.scss */
+.room-status .room-name .prefix {
+  font-weight: 100;
+}
+/* line 110, ../sass/styles.scss */
+.room-status .room-name strong {
+  font-weight: 900;
+}
+/* line 115, ../sass/styles.scss */
+.room-status .room-status-title {
+  font-size: 15em;
+  font-weight: 100;
+}
+/* line 120, ../sass/styles.scss */
+.room-status .change-status {
+  border: 0;
+  background: none;
+  font-size: 2rem;
+  font-family: "Merriweather";
+  font-weight: 300;
+  position: absolute;
+  padding: 1rem 2rem;
+  bottom: 12%;
+}
+/* line 131, ../sass/styles.scss */
+.room-status .event-details {
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+/* line 135, ../sass/styles.scss */
+.room-status .event-details .event-name {
+  font-size: 4.00rem;
+  font-family: "Merriweather";
+  margin-top: 5rem;
+}
+/* line 141, ../sass/styles.scss */
+.room-status .event-details .event-time {
+  font-size: 2.50rem;
+  font-family: "Merriweather";
+  margin-top: 1rem;
+}
+/* line 147, ../sass/styles.scss */
+.room-status .event-details .event-invites {
+  font-size: 1.70rem;
+  font-family: "Merriweather";
+  margin-top: 2rem;
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+  -ms-column-count: 2;
+  -o-column-count: 2;
+  column-count: 2;
+}
+/* line 153, ../sass/styles.scss */
+.room-status .event-details .event-invites li {
+  margin: 1rem 0;
+}
+/* line 155, ../sass/styles.scss */
+.room-status .event-details .event-invites li:first-child {
+  margin-top: 0;
+}
+
+/* line 163, ../sass/styles.scss */
+.info-panel {
+  background-color: #0d2537;
+  color: #e2ecdf;
+  position: relative;
+}
+/* line 168, ../sass/styles.scss */
+.info-panel .current-time {
+  font-weight: 100;
+  width: 100%;
+  font-size: 8.5rem;
+  text-align: center;
+  margin-top: 3rem;
+}
+/* line 176, ../sass/styles.scss */
+.info-panel .current-date {
+  width: 100%;
+  text-align: center;
+  font-size: 1.7rem;
+}
+/* line 181, ../sass/styles.scss */
+.info-panel .current-date .current-day {
+  font-weight: 900;
+  text-transform: capitalize;
+}
+/* line 185, ../sass/styles.scss */
+.info-panel .current-date .current-day-date {
+  font-weight: 400;
+}
+/* line 188, ../sass/styles.scss */
+.info-panel .current-date .current-month {
+  font-weight: 100;
+  text-transform: lowercase;
+}
+/* line 194, ../sass/styles.scss */
+.info-panel .next-title {
+  font-size: 2.5rem;
+  font-weight: 300;
+  text-align: center;
+  width: 100%;
+  margin-top: 2rem;
+}
+/* line 197, ../sass/styles.scss */
+.info-panel .next-title strong {
+  font-weight: 700;
+}
+/* line 206, ../sass/styles.scss */
+.info-panel .bottom-shadow {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(13, 37, 55, 0)), color-stop(100%, #0d2537));
+  background-image: -webkit-linear-gradient(top, rgba(13, 37, 55, 0) 0%, #0d2537 100%);
+  background-image: -moz-linear-gradient(top, rgba(13, 37, 55, 0) 0%, #0d2537 100%);
+  background-image: -o-linear-gradient(top, rgba(13, 37, 55, 0) 0%, #0d2537 100%);
+  background-image: linear-gradient(top, rgba(13, 37, 55, 0) 0%, #0d2537 100%);
+  position: relative;
+  top: 59vh;
+  width: 100%;
+  height: 6vh;
+  z-index: 100;
+  pointer-events: none;
+  margin-bottom: -6vh;
+}
+/* line 217, ../sass/styles.scss */
+.info-panel .next-events {
+  padding-top: 2rem;
+  font-size: 1.5rem;
+  height: 60vh;
+  overflow: scroll;
+  position: relative;
+  z-index: 50;
+  padding-bottom: 2vh;
+}
+/* line 226, ../sass/styles.scss */
+.info-panel .next-events .day {
+  border-top: 1px solid rgba(226, 236, 223, 0.3);
+  font-size: 1.7rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+}
+/* line 233, ../sass/styles.scss */
+.info-panel .next-events .day .day-name {
+  font-weight: 900;
+  text-transform: capitalize;
+}
+/* line 237, ../sass/styles.scss */
+.info-panel .next-events .day .date {
+  font-weight: 400;
+}
+/* line 240, ../sass/styles.scss */
+.info-panel .next-events .day .month {
+  font-weight: 100;
+  text-transform: lowercase;
+}
+/* line 245, ../sass/styles.scss */
+.info-panel .next-events .day:first-child {
+  margin-top: 0;
+  padding-top: 0;
+  border: 0;
+}
+/* line 252, ../sass/styles.scss */
+.info-panel .next-events .events {
+  margin-left: 3rem;
+}
+/* line 254, ../sass/styles.scss */
+.info-panel .next-events .events .event-time {
+  margin-top: 0.7rem;
+  font-weight: 600;
+}
+/* line 258, ../sass/styles.scss */
+.info-panel .next-events .events .event-title {
+  margin-top: 0.2rem;
+  margin-left: 1rem;
+  font-weight: 300;
+}
+/* line 267, ../sass/styles.scss */
+.info-panel .book-room {
+  border: 0;
+  background: none;
+  font-size: 2rem;
+  font-family: "Merriweather";
+  font-weight: 300;
+  padding: 1rem 2rem;
+  width: 100%;
+  background-color: #e2ecdf;
+  color: #0d2537;
+  position: absolute;
+  bottom: -2px;
+  z-index: 150;
+}
+/* line 281, ../sass/styles.scss */
+.info-panel .book-room.cancel {
+  background-color: #e82100;
+  color: #e2ecdf;
+}
+
+/* line 288, ../sass/styles.scss */
+.book-room {
+  background-color: #e2ecdf;
+  color: #0d2537;
+}
+/* line 292, ../sass/styles.scss */
+.book-room .form-title {
+  font-size: 3rem;
+}
+/* line 294, ../sass/styles.scss */
+.book-room .form-title strong {
+  font-weight: 900;
+}
+/* line 297, ../sass/styles.scss */
+.book-room .form-title .room-name {
+  position: absolute;
+  right: 3%;
+}
+/* line 300, ../sass/styles.scss */
+.book-room .form-title .room-name .prefix {
+  font-weight: 100;
+}
+/* line 306, ../sass/styles.scss */
+.book-room form {
+  margin-top: 5rem;
+}
+/* line 308, ../sass/styles.scss */
+.book-room form div {
+  margin-bottom: 1rem;
+}
+/* line 310, ../sass/styles.scss */
+.book-room form div label {
+  width: 10%;
+  text-align: right;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  vertical-align: top;
+  font-size: 2rem;
+  margin-right: 2rem;
+  padding-top: 0.8rem;
+}
+/* line 319, ../sass/styles.scss */
+.book-room form div input {
+  background-color: #e2ecdf;
+  padding: 0.5rem;
+  font-size: 2rem;
+  border: 1px solid #0d2537;
+}
+/* line 324, ../sass/styles.scss */
+.book-room form div input.small {
+  width: 6.5rem;
+}
+/* line 327, ../sass/styles.scss */
+.book-room form div input.wide {
+  width: 70%;
+}
+/* line 330, ../sass/styles.scss */
+.book-room form div input:focus {
+  background-color: white;
+}
+/* line 334, ../sass/styles.scss */
+.book-room form div textarea {
+  background-color: #e2ecdf;
+  padding: 0.5rem;
+  font-size: 2rem;
+  border: 1px solid #0d2537;
+  width: 70%;
+  height: 30vh;
+}
+/* line 341, ../sass/styles.scss */
+.book-room form div textarea:focus {
+  background-color: white;
+}
+/* line 346, ../sass/styles.scss */
+.book-room form input[type=submit] {
+  border: 0;
+  background: none;
+  font-size: 2rem;
+  padding: 1rem 2rem;
+  background-color: #0d2537;
+  color: #e2ecdf;
+  position: absolute;
+  right: 3%;
+  bottom: 12%;
+}
+
+/* line 360, ../sass/styles.scss */
+.modal {
+  width: 80%;
+  height: 80%;
+  position: absolute;
+  z-index: 100;
+  top: 10%;
+  left: 10%;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+  display: block;
+  background-color: #0d2537;
+  color: #e2ecdf;
+}
+/* line 374, ../sass/styles.scss */
+.modal.active {
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 1;
+  pointer-events: auto;
+}
+/* line 380, ../sass/styles.scss */
+.modal .modal-title {
+  text-align: center;
+  font-size: 3rem;
+}
+/* line 383, ../sass/styles.scss */
+.modal .modal-title strong {
+  font-weight: 900;
+}
+/* line 390, ../sass/styles.scss */
+.modal button {
+  border: 0;
+  background: none;
+  font-size: 2rem;
+  font-family: "Merriweather";
+  font-weight: 300;
+  background-color: #e2ecdf;
+  color: #0d2537;
+  padding: 1rem 2rem;
+  margin-top: 1rem;
+}
+/* line 401, ../sass/styles.scss */
+.modal button.selected {
+  background-color: #e82100;
+  color: #e2ecdf;
+}
+/* line 407, ../sass/styles.scss */
+.modal .modal-next {
+  border: 0;
+  background: none;
+  font-size: 2rem;
+  font-family: "Merriweather";
+  font-weight: 300;
+  background-color: #e2ecdf;
+  color: #0d2537;
+  padding: 1rem 2rem;
+  margin-top: 1rem;
+  position: absolute;
+  bottom: 5rem;
+  right: 5rem;
+}
+/* line 424, ../sass/styles.scss */
+.modal .calendar-select ul {
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+  -ms-column-count: 2;
+  -o-column-count: 2;
+  column-count: 2;
+  margin-top: 2rem;
+}
+/* line 427, ../sass/styles.scss */
+.modal .calendar-select ul button {
+  width: 100%;
+}
+/* line 433, ../sass/styles.scss */
+.modal > div {
+  padding: 5rem;
+  display: none;
+}
+/* line 437, ../sass/styles.scss */
+.modal > div.active {
+  display: block;
+}
+
+/* line 443, ../sass/styles.scss */
+.modal.active + .viewport {
+  opacity: 0.3;
+}
