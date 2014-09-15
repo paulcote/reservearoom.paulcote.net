@@ -14,7 +14,7 @@ function checkAuth() {
 }
 
 function handleAuthResult(authResult) {
-  if (authResult) {
+  if (!authResult.error) {
   	getCalendars();
   } else {
    }
